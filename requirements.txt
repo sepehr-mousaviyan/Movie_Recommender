@@ -1,3 +1,8 @@
 nbformat
 nbconvert
 pandas
+matplotlib
+surprise
+tensorflow
+tensorflow_recommenders
+pandarallel
