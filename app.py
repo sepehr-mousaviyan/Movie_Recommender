@@ -18,7 +18,7 @@ def recommend(favorite_movie):
     notebook_path = 'Copy of Copy of Recommender.ipynb'
     notebook = read(open(notebook_path), NO_CONVERT)
 
-    exec('\n'.join([cell['source'] for cell in notebook['cells']), globals())
+    exec('\n'.join([cell['source'] for cell in notebook['cells']]), globals())
 
     return get_recommendations(favorite_movie).head(5)
 
