@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-! pip install nbformat
+
 from nbformat import read, NO_CONVERT
 
 # Load movie data from CSV file
