@@ -15,7 +15,7 @@ def load_movie_data(file_path):
 
 # Recommender function
 def recommend(favorite_movie):
-    notebook_path = 'Copy of Recommender.ipynb'
+    notebook_path = 'Copy of Copy of Recommender.ipynb'
     notebook = read(open(notebook_path), NO_CONVERT)
 
     exec('\n'.join([cell['source'] for cell in notebook['cells'] if cell['cell_type'] == 'code']), globals())
