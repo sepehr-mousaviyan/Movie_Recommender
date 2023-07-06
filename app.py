@@ -1,20 +1,33 @@
 import streamlit as st
+import pandas as pd
+from nbformat import read, NO_CONVERT
 
-# Load movie data
-# ...
+# Load movie data from CSV file
+@st.cache
+def load_movie_data():
+    movie_data = pd.read_csv('movies_metadata.csv')
+    return movie_data
 
-# Build the recommender system
-# ...
+# Recommender function
+def recommend(favorite_movie):
+    notebook_path = 'recommender.ipynb'
+    notebook = read(open(notebook_path), NO_CONVERT)
 
-# Streamlit app
+    exec('\n'.join([cell['source'] for cell in notebook['cells'] if cell['cell_type'] == 'code']), globals())
+
+    return recommend(favorite_movie)
+
 def main():
+    # Load movie data
+    movie_data = load_movie_data()
+
     st.title("Movie Recommender System")
 
     # User input
-    user_preferences = st.multiselect("Select your preferences", ["Action", "Comedy", "Drama"])
+    favorite_movie = st.multiselect("Select your favorite movie", movie_data['movie'])
 
     if st.button("Get Recommendations"):
-        recommendations = get_recommendations(user_preferences)
+        recommendations = recommend(favorite_movie)
         st.write("Recommended Movies:")
         for movie in recommendations:
             st.write(movie)
