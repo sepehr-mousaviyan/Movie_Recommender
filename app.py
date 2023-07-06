@@ -36,7 +36,7 @@ def execute_notebook_sections(notebook_path, sections):
         if cell.cell_type == "code":
             
             cell_metadata = cell.metadata
-            st.write(cell['cell_type'])
+            st.write(cell)
 
             # Execute the cell if it has the desired section metadata
             if "section" in cell_metadata and cell_metadata["section"] in sections:
