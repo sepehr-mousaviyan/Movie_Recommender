@@ -38,6 +38,7 @@ def execute_notebook_sections(notebook_path, sections):
 
             # Execute the cell if it has the desired section metadata
             if "section" in cell_metadata and cell_metadata["section"] in sections:
+                st.write("here")
                 preprocessor.preprocess_cell(cell, {"metadata": cell_metadata})
 
     # Save the executed notebook
