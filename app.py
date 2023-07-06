@@ -22,6 +22,14 @@ def recommend(favorite_movie):
 def main():
 
     st.title("Movie Recommender System")
+
+    # Get current directory contents
+    dir_contents = os.listdir()
+
+    # Display directory contents
+    st.write("Directory Contents:")
+    for item in dir_contents:
+        st.write(item)
     
     cwd = os.getcwd()
 
