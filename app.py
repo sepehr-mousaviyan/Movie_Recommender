@@ -87,10 +87,10 @@ def main():
 
     if st.button("Get Recommendations"):
 
-        notebook_path = "Recommender.ipynb"
-        sections_to_execute = ["Import required libaries", "Content based"]
+        # notebook_path = "Recommender.ipynb"
+        # sections_to_execute = ["Import required libaries", "Content based"]
         
-        execute_notebook_sections(notebook_path, sections_to_execute)
+        # execute_notebook_sections(notebook_path, sections_to_execute)
         recommendations = recommend(favorite_movie)
         # st.write("Recommended Movies:")
         # for movie in recommendations:
