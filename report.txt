@@ -1,0 +1,25 @@
+Project Report: Video Recommendation System
+
+Introduction:
+This project focused on developing a video recommendation system using different approaches such as content-based filtering, collaborative filtering, deep learning, graph-based, and hybrid techniques. The system was implemented using Google Colab and Streamlit, with an initial testing phase using Gradio. The deep learning approach showed promising results. This report provides an overview of the project, including dataset preparation, approach exploration, implementation details, and insights gained.
+
+Approaches Explored:
+
+Content-Based Filtering: Recommendations based on video features like genre and actors.
+Collaborative Filtering: Recommendations based on user behavior and preferences.
+Deep Learning: Training a neural network model to make video recommendations.
+Graph-Based: Recommendations based on graph analysis of the video dataset.
+Hybrid Approach: Combining multiple recommendation techniques for improved results.
+Implementation:
+The project utilized Google Colab and Streamlit for implementation, transitioning from initial testing with Gradio to the final Streamlit framework.
+
+Results and Evaluation:
+Evaluation of the different approaches, including metrics like accuracy and precision. The deep learning approach showed promising performance.
+
+Conclusion:
+The project successfully developed a video recommendation system and identified the deep learning approach as the most effective. Future enhancements and insights gained from the project were discussed.
+
+In conclusion, this project implemented a video recommendation system using various approaches, with the deep learning approach yielding favorable results. The report summarizes the project's key components, findings, and conclusions.
+But, in the end, integration with Hugging Face was not successfully accomplished. However, without a user interface, you can still test the system using the provided code on Google Colab through the command-line interface (CLI). This allows for further evaluation and experimentation with the recommendation system.
+And I should say it was a mistake of mine to take the project in my own and that was very hard to handle and took me so many time to complete.
+Thanks to chatGPT for grammer help.
