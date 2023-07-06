@@ -34,8 +34,9 @@ def execute_notebook_sections(notebook_path, sections):
     # Iterate over the notebook cells
     for cell in notebook.cells:
         if cell.cell_type == "code":
-            st.write("there")
+            
             cell_metadata = cell.metadata
+            st.write(cell_metadata)
 
             # Execute the cell if it has the desired section metadata
             if "section" in cell_metadata and cell_metadata["section"] in sections:
