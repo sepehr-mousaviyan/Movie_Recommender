@@ -21,7 +21,11 @@ def recommend(favorite_movie):
 def main():
 
     st.title("Movie Recommender System")
+    
+    cwd = os.getcwd()
 
+    # Display current working directory
+    st.write("Current Working Directory:", cwd)
     folder_path = st.text_input("Enter the folder path")
     file_name = st.text_input("Enter the file name (including .csv)")
     
