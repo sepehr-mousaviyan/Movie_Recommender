@@ -19,10 +19,12 @@ def recommend(favorite_movie):
     return recommend(favorite_movie)
 
 def main():
+
+    st.title("Movie Recommender System")
+    
     # Load movie data
     movie_data = load_movie_data()
 
-    st.title("Movie Recommender System")
 
     # User input
     favorite_movie = st.multiselect("Select your favorite movie", movie_data['movie'])
