@@ -84,7 +84,7 @@ def main():
 
     if st.button("Get Recommendations"):
 
-        notebook_path = "recommender.ipynb"
+        notebook_path = "Recommender.ipynb"
         sections_to_execute = ["Import required libaries", "Content based"]
         
         execute_notebook_sections(notebook_path, sections_to_execute)
