@@ -8,6 +8,7 @@ from nbformat import read, NO_CONVERT
 @st.cache
 def load_movie_data(file_path):
     movie_data = pd.read_csv('movies_metadata.csv')
+    movie_data = movie_data.sort_values('title') 
     # st.write(movie_data)
     return movie_data['title']
 
