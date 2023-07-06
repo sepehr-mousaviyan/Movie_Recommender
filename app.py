@@ -26,14 +26,14 @@ def main():
     movie_data = load_movie_data()
 
 
-    # User input
-    favorite_movie = st.multiselect("Select your favorite movie", movie_data['movie'])
+    # # User input
+    # favorite_movie = st.multiselect("Select your favorite movie", movie_data['movie'])
 
-    if st.button("Get Recommendations"):
-        recommendations = recommend(favorite_movie)
-        st.write("Recommended Movies:")
-        for movie in recommendations:
-            st.write(movie)
+    # if st.button("Get Recommendations"):
+    #     recommendations = recommend(favorite_movie)
+    #     st.write("Recommended Movies:")
+    #     for movie in recommendations:
+    #         st.write(movie)
 
 if __name__ == "__main__":
     main()
