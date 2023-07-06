@@ -24,34 +24,31 @@ def main():
 
     st.title("Movie Recommender System")
 
-    # Get current directory contents
-    dir_contents = os.listdir()
+    # # Get current directory contents
+    # dir_contents = os.listdir()
 
-    # Display directory contents
-    st.write("Directory Contents:")
-    for item in dir_contents:
-        st.write(item)
+    # # Display directory contents
+    # st.write("Directory Contents:")
+    # for item in dir_contents:
+    #     st.write(item)
     
-    cwd = os.getcwd()
+    # cwd = os.getcwd()
 
-    # Display current working directory
-    st.write("Current Working Directory:", cwd)
-    folder_path = st.text_input("Enter the folder path")
-    file_name = st.text_input("Enter the file name (including .csv)")
+    # # Display current working directory
+    # st.write("Current Working Directory:", cwd)
+    # folder_path = st.text_input("Enter the folder path")
+    # file_name = st.text_input("Enter the file name (including .csv)")
     
-    if folder_path and file_name:
-        try:
-            # Construct the file path
-            file_path = folder_path.rstrip("/") + "/" + file_name
-            
-            st.write(file_path)
-            movie_data = load_movie_data(file_path)
 
-            # Display DataFrame
-            st.write(df)
+    # Construct the file path
+    file_path = "movie_metadata.csv"
+    
+    st.write(file_path)
+    movie_data = load_movie_data(file_path)
 
-        except FileNotFoundError:
-            st.error("File not found. Please check the folder path and file name.")
+    # Display DataFrame
+    st.write(movie_data)
+    
     # Load movie data
     # movie_data = load_movie_data(folder_path)
 
