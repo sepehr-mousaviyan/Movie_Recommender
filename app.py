@@ -8,8 +8,8 @@ from nbformat import read, NO_CONVERT
 @st.cache
 def load_movie_data(file_path):
     movie_data = pd.read_csv('movies_metadata.csv')
-    st.write(movie_data)
-    return movie_data['name']
+    # st.write(movie_data)
+    return movie_data['title']
 
 # Recommender function
 def recommend(favorite_movie):
