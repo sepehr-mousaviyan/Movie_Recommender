@@ -44,7 +44,7 @@ def main():
     # Construct the file path
     file_path = "movie_metadata.csv"
     
-    st.write(file_path)
+    # st.write(file_path)
     movie_data = load_movie_data(file_path)
 
     # Display DataFrame
