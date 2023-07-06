@@ -30,7 +30,7 @@ def main():
             # Construct the file path
             file_path = folder_path.rstrip("/") + "/" + file_name
 
-            movie_data = load_movie_data(file_path_path)
+            movie_data = load_movie_data(file_path)
 
             # Display DataFrame
             st.write(df)
