@@ -20,7 +20,7 @@ def recommend(favorite_movie):
 
     exec('\n'.join([cell['source'] for cell in notebook['cells'] if cell['cell_type'] == 'code']), globals())
 
-    return recommend(favorite_movie)
+    return get_recommendations(favorite_movie).head(5)
 
 
 def execute_notebook_sections(notebook_path, sections):
@@ -91,7 +91,7 @@ def main():
         sections_to_execute = ["Import required libaries", "Content based"]
         
         execute_notebook_sections(notebook_path, sections_to_execute)
-        recommendations = get_recommendations(favorite_movie).head(5)
+        recommendations = recommend(favorite_movie)
         # st.write("Recommended Movies:")
         # for movie in recommendations:
         #     st.write(movie)
