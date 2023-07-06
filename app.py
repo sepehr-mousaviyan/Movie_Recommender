@@ -53,7 +53,7 @@ def main():
 
 
     # # User input
-    favorite_movie = st.multiselect("Select your favorite movie", movie_data['title'])
+    favorite_movie = st.multiselect("Select your favorite movie", movie_data)
 
     # if st.button("Get Recommendations"):
     #     recommendations = recommend(favorite_movie)
