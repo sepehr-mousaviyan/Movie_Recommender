@@ -29,7 +29,8 @@ def main():
         try:
             # Construct the file path
             file_path = folder_path.rstrip("/") + "/" + file_name
-
+            
+            st.write(file_path)
             movie_data = load_movie_data(file_path)
 
             # Display DataFrame
