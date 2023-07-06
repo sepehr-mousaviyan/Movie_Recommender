@@ -50,10 +50,10 @@ def main():
     st.write(movie_data)
     
     # Load movie data
-    # movie_data = load_movie_data(folder_path)
+
 
     # # User input
-    # favorite_movie = st.multiselect("Select your favorite movie", movie_data['movie'])
+    favorite_movie = st.multiselect("Select your favorite movie", movie_data['title'])
 
     # if st.button("Get Recommendations"):
     #     recommendations = recommend(favorite_movie)
