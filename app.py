@@ -4,6 +4,7 @@ import os
 import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 from nbformat import read, NO_CONVERT
+import pickle
 
 # Load movie data from CSV file
 @st.cache_data 
