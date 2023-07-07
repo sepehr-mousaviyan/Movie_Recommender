@@ -53,7 +53,7 @@ def main():
     selected = st.multiselect("Select your favorite movies(at least 3 movies)", movies['title'].values)
 
     if st.button("Get Recommendations"):
-        recomend_movies, poster = recomend(selected_movie)
+        recomend_movies, poster = recomend(selected)
         st.write("Recommended Movies:[Just made for you:)]")
         col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
