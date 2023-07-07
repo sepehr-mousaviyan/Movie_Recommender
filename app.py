@@ -23,6 +23,7 @@ def fetch_poster(movie_id):
 # Recommender function
 def recomend(movie):
     for moviei in movies:
+        st.text(moviei['title'])
         if (moviei['title'] == movie):
             movie_index = movie.index[0]
     # movie_index = movies[movies['title'] == movie].index[0]
