@@ -22,7 +22,10 @@ def fetch_poster(movie_id):
 
 # Recommender function
 def recomend(movie):
-    movie_index = movies[movies['title'] == movie].index[0]
+    for moviei in movies:
+        if (moviei['title'] == movie):
+            movie_index = movie.index[0]
+    # movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
     movie_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:6]
     recomendedMovies = []
