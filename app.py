@@ -30,7 +30,7 @@ def recomend(movie):
     for moviei in movies['title']:
         st.text(moviei)
         st.text(movie)
-        if (moviei['title'] == movie):
+        if (moviei == movie):
             movie_index = movie.index[0]
     # movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
