@@ -7,7 +7,10 @@ from nbformat import read, NO_CONVERT
 import pickle
 import requests
 
-
+movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
+similarity = pickle.load(open('similarity.pkl', 'rb'))
+movies = pd.DataFrame(movies_dict)
+    
 @st.cache_data 
 def load_movie_data(file_path):
     movie_data = pd.read_csv('movies_metadata.csv')
@@ -44,9 +47,6 @@ def recomend(movie):
 
 def main():
     
-    movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
-    similarity = pickle.load(open('similarity.pkl', 'rb'))
-    movies = pd.DataFrame(movies_dict)
     
     with st.sidebar:
         st.title("Movie Recommender Pro")
