@@ -54,7 +54,9 @@ def execute_notebook_sections(notebook_path, sections):
 def main():
 
     movies = pickle.load(open("movies.pkl", 'rb'))
+    movies_date = list( movies['release_date'])
     movies_list=list(movies['title'] )
+    movies_list = [i+' '+str(j.year) for i,j in zip(movies_list,movies_date)]
     with st.sidebar:
         # logo = Image.open("")
         # st.image(logo, caption='MM Movie Recommender')
@@ -95,6 +97,7 @@ def main():
 
     # # User input
     favorite_movie = st.multiselect("Select your favorite movie", movie_data)
+    
     if len(favorite_movie) ==1:
         col1 , col2 = st.columns([1,3])
         t1 =movies.iloc[movies_list.index(favorite_movie[0])]['imdb_id']
