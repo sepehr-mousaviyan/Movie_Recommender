@@ -25,15 +25,15 @@ def fetch_poster(movie_id):
 
 # Recommender function
 def recomend(movie):
-    st.text(movies['title'])
-    count = 0
+    # st.text(movies['title'])
+    count = -1
     for moviei in movies['title']:
         count = count + 1
-        st.text(moviei)
-        st.text(movie)
+        # st.text(moviei)
+        # st.text(movie)
         if (moviei == movie):
             movie_index = count
-            st.text(movie_index)
+            # st.text(movie_index)
             break
     # movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
