@@ -53,7 +53,7 @@ def execute_notebook_sections(notebook_path, sections):
 def main():
     
     with st.sidebar:
-        logo = Image.open("")
+        # logo = Image.open("")
         st.image(logo, caption='MM Movie Recommender')
         st.title("MM Movie Recommender")
         st.subheader("Development Team:")
