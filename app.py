@@ -51,7 +51,7 @@ def execute_notebook_sections(notebook_path, sections):
 
 def main():
 
-    movies = pickle.load(open("movie.pkl", 'rb'))
+    movies = pickle.load(open("movies.pkl", 'rb'))
     
     with st.sidebar:
         # logo = Image.open("")
@@ -97,7 +97,7 @@ def main():
         col1 , col2 = st.columns([1,3])
         t1 =movies.iloc[movies_list.index(selected[0])]['imdb_id']
         
-        url = f"http://www.omdbapi.com/?i={t1}&apikey=d5a77f7b"
+        url = f"http://www.omdbapi.com/?i={t1}&apikey=9c7662c4"
         re = requests.get(url).json()
         if('N/A' in re['Poster']):
             re['Poster']='./404.jpg'
