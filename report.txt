@@ -1,5 +1,6 @@
 Project Report: Video Recommendation System
-
+https://huggingface.co/spaces/semomos3/Movie_Recommender/
+https://colab.research.google.com/drive/1IHZME7w9EF9goinIpZXCOkhv3CX0RexU
 Introduction:
 This project focused on developing a video recommendation system using different approaches such as content-based filtering, collaborative filtering, deep learning, graph-based, and hybrid techniques. The system was implemented using Google Colab and Streamlit, with an initial testing phase using Gradio. The deep learning approach showed promising results. This report provides an overview of the project, including dataset preparation, approach exploration, implementation details, and insights gained.
 
