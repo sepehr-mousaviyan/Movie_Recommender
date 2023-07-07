@@ -56,7 +56,7 @@ def main():
         st.title("Movie Recommender Pro")
         st.subheader("Developer:")
         st.markdown("<a href='https://www.linkedin.com/in/sepehr-mousaviyan-8baa7b1ab/'>Sepehr mousaviyan</a>", unsafe_allow_html=True)
-        st.markdown("Checkout my colab for see full version of many methods:")
+        st.markdown("Checkout my colab to see full version of many methods:")
         st.markdown("<a href='https://colab.research.google.com/drive/1IHZME7w9EF9goinIpZXCOkhv3CX0RexU#scrollTo=YzbmNPo673-Q'>Note book link</a>", unsafe_allow_html=True)
 
     st.title("Movie Recommender System")
