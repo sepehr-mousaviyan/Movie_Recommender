@@ -50,6 +50,8 @@ def execute_notebook_sections(notebook_path, sections):
 
 
 def main():
+
+    movies = pickle.load(open("movie.pkl", 'rb'))
     
     with st.sidebar:
         # logo = Image.open("")
