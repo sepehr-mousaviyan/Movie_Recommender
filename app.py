@@ -55,7 +55,7 @@ def main():
     st.title("Movie Recommender System")
 
 
-    selected = st.multiselect("Select your favorite movies(at least 3 movies)", movies['title'].values)
+    selected = st.selectbox("Select your favorite movies(at least 3 movies)", movies['title'].values)
 
     if st.button("Get Recommendations"):
         recomend_movies, poster = recomend(selected)
