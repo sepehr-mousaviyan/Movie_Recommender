@@ -54,7 +54,7 @@ def main():
     
     with st.sidebar:
         # logo = Image.open("")
-        st.image(logo, caption='MM Movie Recommender')
+        # st.image(logo, caption='MM Movie Recommender')
         st.title("MM Movie Recommender")
         st.subheader("Development Team:")
         st.markdown("<a href='https://www.linkedin.com/in/sepehr-mousaviyan-8baa7b1ab/'>Sepehr mousaviyan</a>", unsafe_allow_html=True)
