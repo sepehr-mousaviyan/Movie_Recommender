@@ -6,7 +6,7 @@ from nbconvert.preprocessors import ExecutePreprocessor
 from nbformat import read, NO_CONVERT
 
 # Load movie data from CSV file
-@st.cache
+@st.cache_data 
 def load_movie_data(file_path):
     movie_data = pd.read_csv('movies_metadata.csv')
     movie_data = movie_data.sort_values('title') 
@@ -51,6 +51,14 @@ def execute_notebook_sections(notebook_path, sections):
 
 
 def main():
+    
+    with st.sidebar:
+        logo = Image.open("")
+        st.image(logo, caption='MM Movie Recommender')
+        st.title("MM Movie Recommender")
+        st.subheader("Development Team:")
+        st.markdown("<a href='https://www.linkedin.com/in/sepehr-mousaviyan-8baa7b1ab/'>Sepehr mousaviyan</a>", unsafe_allow_html=True)
+        st.markdown("This app uses ---- model, checkout my colab full version of many methods that i implemented")
 
     st.title("Movie Recommender System")
 
