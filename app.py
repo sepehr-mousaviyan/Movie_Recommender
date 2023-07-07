@@ -10,7 +10,6 @@ from nbformat import read, NO_CONVERT
 def load_movie_data(file_path):
     movie_data = pd.read_csv('movies_metadata.csv')
     movie_data = movie_data.sort_values('title') 
-    # st.write(movie_data)
     return movie_data['title']
 
 # Recommender function
@@ -92,6 +91,20 @@ def main():
 
     # # User input
     favorite_movie = st.multiselect("Select your favorite movie", movie_data)
+    if len(favorite_movie) ==1:
+        col1 , col2 = st.columns([1,3])
+        t1 =movies.iloc[movies_list.index(selected[0])]['imdb_id']
+        
+        url = f"http://www.omdbapi.com/?i={t1}&apikey=d5a77f7b"
+        re = requests.get(url).json()
+        if('N/A' in re['Poster']):
+            re['Poster']='./404.jpg'
+        with col1:
+            st.image(re['Poster'], width=100)
+        with col2:
+            st.write(re['Title']+ "(" + re['Year'] + ")")
+            st.caption(f"Genres: {re['Genre']}")
+
 
     if st.button("Get Recommendations"):
 
