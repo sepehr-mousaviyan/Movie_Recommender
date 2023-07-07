@@ -96,7 +96,7 @@ def main():
     favorite_movie = st.multiselect("Select your favorite movie", movie_data)
     if len(favorite_movie) ==1:
         col1 , col2 = st.columns([1,3])
-        t1 =movies.iloc[movies_list.index(selected[0])]['imdb_id']
+        t1 =movies.iloc[movies_list.index(favorite_movie[0])]['imdb_id']
         
         url = f"http://www.omdbapi.com/?i={t1}&apikey=9c7662c4"
         re = requests.get(url).json()
