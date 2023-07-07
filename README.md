@@ -9,4 +9,5 @@ app_file: app.py
 pinned: false
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+Full project on colab: https://colab.research.google.com/drive/1IHZME7w9EF9goinIpZXCOkhv3CX0RexU#scrollTo=3QsDJ52-qf21
