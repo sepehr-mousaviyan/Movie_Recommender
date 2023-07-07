@@ -53,7 +53,7 @@ def execute_notebook_sections(notebook_path, sections):
 def main():
 
     movies = pickle.load(open("movies.pkl", 'rb'))
-    
+    movies_list=list(movies['title'] )
     with st.sidebar:
         # logo = Image.open("")
         # st.image(logo, caption='MM Movie Recommender')
