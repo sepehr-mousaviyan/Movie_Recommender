@@ -22,7 +22,7 @@ def fetch_poster(movie_id):
 
 # Recommender function
 def recomend(movie):
-    for moviei in movies():
+    for moviei in movies:
         st.text(moviei['title'])
         st.text(movie)
         if (moviei['title'] == movie):
