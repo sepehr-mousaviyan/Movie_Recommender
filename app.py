@@ -22,6 +22,7 @@ def fetch_poster(movie_id):
 
 # Recommender function
 def recomend(movie):
+    st.text(movies)
     for moviei in movies:
         st.text(moviei)
         st.text(movie)
@@ -38,13 +39,15 @@ def recomend(movie):
         recomended_movies_posters.append(fetch_poster(movie_id))
     return  recomendedMovies, recomended_movies_posters
 
-movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
-movies = pd.DataFrame(movies_dict)
+
 
 
 def main():
-
+    
+    movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
+    similarity = pickle.load(open('similarity.pkl', 'rb'))
+    movies = pd.DataFrame(movies_dict)
+    
     with st.sidebar:
         st.title("Movie Recommender Pro")
         st.subheader("Developer:")
